@@ -1,36 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+<meta charset="UTF-8">
+<title>Hexágono</title>
+
 <style>
+/* Parte central do hexágono */
 .hexagono {
+
   width: 200px;
   height: 115px;
+
   background: teal;
+
   position: relative;
   margin: 100px auto;
 }
 
-.hexagono::before,
-.hexagono::after {
+/* Parte superior */
+.hexagono::before {
+
   content: "";
   position: absolute;
-  width: 0;
+
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-}
-
-.hexagono::before {
-  bottom: 100%;
   border-bottom: 57px solid teal;
+
+  bottom: 100%;
 }
 
+/* Parte inferior */
 .hexagono::after {
-  top: 100%;
+
+  content: "";
+  position: absolute;
+
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
   border-top: 57px solid teal;
+
+  top: 100%;
 }
 </style>
 </head>
+
 <body>
+
 <div class="hexagono"></div>
+
 </body>
 </html>

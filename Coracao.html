@@ -1,38 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+<meta charset="UTF-8">
+<title>Coração</title>
+
 <style>
+/* Parte principal do coração */
 .coracao {
+
   position: relative;
+
   width: 100px;
   height: 100px;
+
   background: red;
+
+  /* Rotaciona para formar a base */
   transform: rotate(-45deg);
+
   margin: 100px auto;
 }
 
+/* Partes arredondadas */
 .coracao::before,
 .coracao::after {
+
   content: "";
   position: absolute;
+
   width: 100px;
   height: 100px;
+
   background: red;
+
   border-radius: 50%;
 }
 
+/* Lado esquerdo */
 .coracao::before {
   top: -50px;
   left: 0;
 }
 
+/* Lado direito */
 .coracao::after {
   left: 50px;
   top: 0;
 }
 </style>
 </head>
+
 <body>
+
 <div class="coracao"></div>
+
 </body>
 </html>
