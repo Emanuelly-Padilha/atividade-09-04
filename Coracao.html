@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.coracao {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: red;
+  transform: rotate(-45deg);
+  margin: 100px auto;
+}
+
+.coracao::before,
+.coracao::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: red;
+  border-radius: 50%;
+}
+
+.coracao::before {
+  top: -50px;
+  left: 0;
+}
+
+.coracao::after {
+  left: 50px;
+  top: 0;
+}
+</style>
+</head>
+<body>
+<div class="coracao"></div>
+</body>
+</html>
